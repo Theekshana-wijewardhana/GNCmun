@@ -51,7 +51,7 @@ def animate_2Dbot(X,U,T,param,robot_scale,frame_num,speedup):
   ax = fig.add_subplot(aspect='equal')
   ax.set_xlim(-2.2, 2.2)
   ax.set_ylim(-2.2, 2.2)
-  triangle = ax.add_patch(plt.Polygon(np.array([[-0.4,0.3],[-0.4,-0.3],[0.4,-0.01],[1.2,0],[0.4,0.01]])*robot_scale, True))
+  triangle = ax.add_patch(plt.Polygon(np.array([[-0.4,0.3],[-0.4,-0.3],[0.4,-0.01],[1.2,0],[0.4,0.01]])*robot_scale, closed=True))
   line, = ax.plot([0, 0,3], [0, -1,5], lw=1, c='c', alpha=0.5) # draw a line 
   line.set_data([0],[0])
   transform = mpl.transforms.Affine2D().rotate_deg(-45) + mpl.transforms.Affine2D().translate(-5,-5) 
